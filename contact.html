@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - ArtePincel | Fale Conosco</title>
+    <meta name="description" content="Entre em contato com a ArtePincel. Estamos aqui para ajudar com todas as suas necessidades em materiais artísticos.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ArtePincel</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="products.html">Produtos</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Entre em Contato</h1>
+                <p>Estamos aqui para ajudar você a encontrar os melhores materiais artísticos e responder todas as suas dúvidas</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-details">
+                        <h2>Informações de Contato</h2>
+                        <div class="contact-item">
+                            <h3>Endereço</h3>
+                            <p><a href="https://maps.google.com/?q=Rua+das+Artes+123+São+Paulo+SP" target="_blank">Rua das Artes, 123<br>São Paulo - SP<br>CEP: 01234-567</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Telefone</h3>
+                            <p><a href="tel:+5511912345678">+55 11 91234-5678</a></p>
+                            <p class="contact-note">Atendimento de Segunda a Sexta, das 9h às 18h</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Email</h3>
+                            <p><a href="mailto:artepincel@gmail.com">artepincel@gmail.com</a></p>
+                            <p class="contact-note">Respondemos em até 24 horas úteis</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Horário de Funcionamento</h3>
+                            <ul class="business-hours">
+                                <li><span>Segunda a Sexta:</span> 9h às 18h</li>
+                                <li><span>Sábado:</span> 9h às 13h</li>
+                                <li><span>Domingo:</span> Fechado</li>
+                            </ul>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Atendimento Especializado</h3>
+                            <p>Nossa equipe de especialistas está pronta para ajudar você a escolher os melhores materiais para seu projeto artístico. Agende uma consulta personalizada!</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h2>Envie sua Mensagem</h2>
+                        <p class="form-intro">Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+                        <form action="thanks_form.php" method="POST">
+                            <div class="form-group">
+                                <label for="name">Nome Completo</label>
+                                <input type="text" id="name" name="name" required placeholder="Seu nome completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="produtos">Informações sobre Produtos</option>
+                                    <option value="orcamento">Solicitar Orçamento</option>
+                                    <option value="suporte">Suporte Técnico</option>
+                                    <option value="outros">Outros Assuntos</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" name="message" required placeholder="Descreva sua mensagem em detalhes..."></textarea>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="privacy" name="privacy" value="on" required>
+                                <label for="privacy">Aceito a <a href="privacy-policy.html">Política de Privacidade</a></label>
+                            </div>
+                            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map">
+            <div class="container">
+                <h2>Nossa Localização</h2>
+                <p class="map-description">Estamos localizados em uma região central de São Paulo, com fácil acesso e estacionamento próprio.</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975774538164!2d-46.6499641!3d-23.5634015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0x63b9d5d52c4aaede!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1650000000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="location-info">
+                    <h3>Como Chegar</h3>
+                    <ul>
+                        <li>Metrô: Estação Paulista (5 minutos a pé)</li>
+                        <li>Ônibus: Diversas linhas na Av. Paulista</li>
+                        <li>Carro: Estacionamento próprio para clientes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <h2>Perguntas Frequentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Qual o prazo de entrega?</h3>
+                        <p>O prazo de entrega varia de acordo com sua localização, mas geralmente é de 3 a 7 dias úteis para capitais e regiões metropolitanas.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Vocês oferecem consultoria técnica?</h3>
+                        <p>Sim! Nossa equipe de especialistas está disponível para auxiliar na escolha dos melhores materiais para sua técnica artística.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Quais as formas de pagamento?</h3>
+                        <p>Aceitamos cartões de crédito, débito, transferência bancária e PIX.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>ArtePincel</h3>
+                    <p>Sua loja especializada em materiais artísticos de alta qualidade. Desde 2010 inspirando artistas em todo o Brasil.</p>
+                    <div class="contact-info">
+                        <p><strong>Endereço:</strong></p>
+                        <p>Rua das Artes, 123</p>
+                        <p>São Paulo - SP</p>
+                        <p>CEP: 01234-567</p>
+                        <p><strong>Contato:</strong></p>
+                        <p><a href="tel:+5511912345678">+55 11 91234-5678</a></p>
+                        <p><a href="mailto:artepincel@gmail.com">artepincel@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="products.html">Produtos</a></li>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-products">
+                    <h3>Produtos</h3>
+                    <ul>
+                        <li><a href="products.html#pinceis">Pincéis e Penas</a></li>
+                        <li><a href="products.html#tintas">Tintas Profissionais</a></li>
+                        <li><a href="products.html#papeis">Papéis e Telas</a></li>
+                        <li><a href="products.html#kits">Kits Especiais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-support">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Política de Privacidade</a></li>
+                        <li><a href="terms-conditions.html">Termos e Condições</a></li>
+                        <li><a href="contact.html#faq">Perguntas Frequentes</a></li>
+                        <li><a href="contact.html#shipping">Política de Envio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info-bottom">
+                    <p>Horário de Funcionamento: Segunda a Sexta, 9h às 18h</p>
+                    <p>CNPJ: 12.345.678/0001-90</p>
+                </div>
+                <p class="copyright">&copy; 2024 ArtePincel. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add scroll class to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 

@@ -199,10 +199,13 @@
                 <div class="newsletter-content">
                     <form class="newsletter-form" action="thanks_form.php" method="POST">
                         <div class="form-group">
-                            <input type="email" placeholder="Seu melhor e-mail" required>
+                            <input type="email" name="email" placeholder="Seu melhor e-mail" required>
                             <button type="submit" class="btn-primary">Inscrever-se</button>
                         </div>
-                        <p class="form-note">Ao se inscrever, você concorda com nossa <a href="privacy-policy.html">Política de Privacidade</a></p>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="privacy-newsletter" name="privacy" required>
+                            <label for="privacy-newsletter">Concordo com a <a href="privacy-policy.html">Política de Privacidade</a></label>
+                        </div>
                     </form>
                     <div class="newsletter-benefits">
                         <div class="benefit-item">
@@ -270,9 +273,9 @@
                     <p>Sua loja especializada em materiais artísticos de alta qualidade. Desde 2010 inspirando artistas em todo o Brasil.</p>
                     <div class="contact-info">
                         <p><strong>Endereço:</strong></p>
-                        <p>Rua das Artes, 123</p>
-                        <p>São Paulo - SP</p>
-                        <p>CEP: 01234-567</p>
+                        <p>R. Carlos Comenale, 96</p>
+                        <p>Cerqueira César, São Paulo - SP</p>
+                        <p>CEP: 01332-030</p>
                         <p><strong>Contato:</strong></p>
                         <p><a href="tel:+5511912345678">+55 11 91234-5678</a></p>
                         <p><a href="mailto:artepincel@gmail.com">artepincel@gmail.com</a></p>

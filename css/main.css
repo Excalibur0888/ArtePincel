@@ -101,13 +101,14 @@ nav ul {
     gap: 3rem;
 }
 
-nav a {
+nav ul li a {
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
     position: relative;
     padding: 0.5rem 0;
+		z-index: 1000;
 }
 
 nav a::after {
@@ -434,14 +435,15 @@ footer a:hover {
 
 .footer-bottom {
     margin-top: 3rem;
+		text-align: center;
     padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 .footer-info-bottom {
     display: flex;
+		text-align: center;
     justify-content: center;
-    gap: 3rem;
     margin-bottom: 1rem;
 }
 

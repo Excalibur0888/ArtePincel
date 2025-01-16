@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
+    <style>
+        @media (max-width: 768px) {
+            .slider-navigation {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -279,7 +286,7 @@
                             <p>CEP: 01332-030</p>
                         </a>
                         <p><strong>Contato:</strong></p>
-                        <p><a href="tel:+5511912345678">+55 11 91234-5678</a></p>
+                        <p><a href="tel:+5511992018326">+55 11 99201-8326</a></p>
                         <p><a href="mailto:artepincel@gmail.com">artepincel@gmail.com</a></p>
                     </div>
                 </div>
@@ -306,183 +313,19 @@
                     <ul>
                         <li><a href="privacy-policy.html">Política de Privacidade</a></li>
                         <li><a href="terms-conditions.html">Termos e Condições</a></li>
-                        <li><a href="contact.html">Perguntas Frequentes</a></li>
-                        <li><a href="contact.html">Política de Envio</a></li>
+
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-info-bottom">
                     <p>Horário de Funcionamento: Segunda a Sexta, 9h às 18h</p>
-                    <p>CNPJ: 12.345.678/0001-90</p>
+                    <p></p>
                 </div>
                 <p class="copyright">&copy; 2024 ArtePincel. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Add scroll class to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Burger menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const burgerMenu = document.querySelector('.burger-menu');
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelectorAll('nav a');
-
-            burgerMenu.addEventListener('click', function() {
-                this.classList.toggle('active');
-                nav.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            });
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    burgerMenu.classList.remove('active');
-                    nav.classList.remove('active');
-                    document.body.classList.remove('menu-open');
-                });
-            });
-        });
-
-        // Slider functionality
-        class Slider {
-            constructor(sliderId, options = {}) {
-                this.slider = document.getElementById(sliderId);
-                this.sliderWrapper = this.slider;
-                this.slides = Array.from(this.sliderWrapper.children);
-                this.container = this.slider.closest('.slider-container');
-                this.navigation = this.container.querySelector('.slider-navigation');
-                this.prevButton = this.navigation?.querySelector('.prev-button');
-                this.nextButton = this.navigation?.querySelector('.next-button');
-                
-                this.options = {
-                    sideNav: options.sideNav || false,
-                    slidesPerView: 3
-                };
-                
-                this.currentSlide = 0;
-                this.totalSlides = this.slides.length;
-                
-                if (this.options.sideNav && window.innerWidth > 768) {
-                    this.container.classList.add('side-nav');
-                    this.setupNavigation();
-                }
-                
-                this.init();
-                this.setupResponsive();
-            }
-
-            init() {
-                if (window.innerWidth <= 768) return;
-                this.updateSlides();
-            }
-
-            setupNavigation() {
-                if (this.prevButton && this.nextButton) {
-                    this.prevButton.addEventListener('click', () => this.prevSlide());
-                    this.nextButton.addEventListener('click', () => this.nextSlide());
-                }
-            }
-
-            setupResponsive() {
-                window.addEventListener('resize', () => {
-                    if (window.innerWidth <= 768) {
-                        this.sliderWrapper.style.transform = 'none';
-                        return;
-                    }
-                    this.updateSlides();
-                });
-            }
-
-            updateSlides() {
-                if (window.innerWidth <= 768) return;
-                
-                const slideWidth = 100 / this.options.slidesPerView;
-                const offset = -this.currentSlide * slideWidth;
-                this.sliderWrapper.style.transform = `translateX(${offset}%)`;
-            }
-
-            nextSlide() {
-                if (window.innerWidth <= 768) return;
-                
-                this.currentSlide++;
-                if (this.currentSlide >= this.totalSlides - this.options.slidesPerView + 1) {
-                    this.currentSlide = 0;
-                }
-                this.updateSlides();
-            }
-
-            prevSlide() {
-                if (window.innerWidth <= 768) return;
-                
-                this.currentSlide--;
-                if (this.currentSlide < 0) {
-                    this.currentSlide = this.totalSlides - this.options.slidesPerView;
-                }
-                this.updateSlides();
-            }
-        }
-
-        // Initialize sliders
-        document.addEventListener('DOMContentLoaded', () => {
-            new Slider('productsSlider', { sideNav: true });
-            new Slider('techniquesSlider', { sideNav: true });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.slider-wrapper');
-            const slides = document.querySelectorAll('.slider-slide');
-            const prevButton = document.querySelector('.prev-button');
-            const nextButton = document.querySelector('.next-button');
-            const dots = document.querySelectorAll('.slider-dot');
-            
-            let currentIndex = 0;
-            const slidesPerView = 3;
-            
-            function updateSlider() {
-                const offset = -currentIndex * (100 / slidesPerView);
-                slider.style.transform = `translateX(${offset}%)`;
-                
-                // Обновляем активную точку
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentIndex);
-                });
-            }
-            
-            // Добавляем обработчики для точек
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateSlider();
-                });
-            });
-            
-            prevButton?.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
-            });
-            
-            nextButton?.addEventListener('click', () => {
-                if (currentIndex < dots.length - 1) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            });
-            
-            // Инициализация слайдера
-            updateSlider();
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 </html> 

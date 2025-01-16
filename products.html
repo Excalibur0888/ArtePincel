@@ -13,6 +13,11 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">ArtePincel</a>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -304,7 +309,7 @@
                             <p>CEP: 01332-030</p>
                         </a>
                         <p><strong>Contato:</strong></p>
-                        <p><a href="tel:+5511912345678">+55 11 91234-5678</a></p>
+                        <p><a href="tel:+5511992018326">+55 11 99201-8326</a></p>
                         <p><a href="mailto:artepincel@gmail.com">artepincel@gmail.com</a></p>
                     </div>
                 </div>
@@ -331,77 +336,19 @@
                     <ul>
                         <li><a href="privacy-policy.html">Política de Privacidade</a></li>
                         <li><a href="terms-conditions.html">Termos e Condições</a></li>
-                        <li><a href="contact.html">Perguntas Frequentes</a></li>
-                        <li><a href="contact.html">Política de Envio</a></li>
+
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="footer-info-bottom">
                     <p>Horário de Funcionamento: Segunda a Sexta, 9h às 18h</p>
-                    <p>CNPJ: 12.345.678/0001-90</p>
+                    <p></p>
                 </div>
                 <p class="copyright">&copy; 2024 ArtePincel. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Add scroll class to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize sliders
-        document.addEventListener('DOMContentLoaded', () => {
-            new Slider('productsSlider', { sideNav: true });
-            new Slider('kitsSlider', { sideNav: true });
-            new Slider('techniquesSlider', { sideNav: true });
-        });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const slider = document.querySelector('.slider-wrapper');
-            const slides = document.querySelectorAll('.slider-slide');
-            const prevButton = document.querySelector('.prev-button');
-            const nextButton = document.querySelector('.next-button');
-            
-            let currentIndex = 0;
-            const slidesPerView = 3;
-            const slideWidth = 100 / slidesPerView;
-            
-            function updateSlider() {
-                const offset = -currentIndex * slideWidth;
-                slider.style.transform = `translateX(${offset}%)`;
-            }
-            
-            prevButton.addEventListener('click', () => {
-                if (currentIndex > 0) {
-                    currentIndex--;
-                    updateSlider();
-                }
-            });
-            
-            nextButton.addEventListener('click', () => {
-                if (currentIndex < slides.length - slidesPerView) {
-                    currentIndex++;
-                    updateSlider();
-                }
-            });
-            
-            // Инициализация слайдера
-            updateSlider();
-            
-            // Обработка изменения размера окна
-            window.addEventListener('resize', () => {
-                currentIndex = 0;
-                updateSlider();
-            });
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 </html> 
